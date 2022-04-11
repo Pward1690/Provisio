@@ -17,8 +17,8 @@ import java.sql.ResultSetMetaData;
 public class DBHelper {
 	// Set connection details here:
 	private final static String db_url = "jdbc:mysql://localhost:3306/provisio?serverTimezone=UTC";
-	private final static String db_username = "root";
-	private final static String db_password = "root";
+	private final static String db_username = "user";
+	private final static String db_password = "root@1234";
 
 	public DBHelper(){}
 

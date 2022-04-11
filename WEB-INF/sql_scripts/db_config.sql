@@ -219,12 +219,15 @@ INSERT INTO provisio.user_reservations (
 	user_id,
 	provisio_location_id,
 	amenity_id,
+	bedding_id,
 	guest_cost_id,
 	check_in_date,
 	check_out_date,
 	reservation_date,
-	ip
+	ip,
+	number_of_nights
 ) VALUES (
+	1,
 	1,
 	1,
 	1,
@@ -232,19 +235,23 @@ INSERT INTO provisio.user_reservations (
 	STR_TO_DATE('2022-31-03 00:00:00', '%Y-%d-%m %H:%i:%s'),
 	STR_TO_DATE('2022-03-04 00:00:00', '%Y-%d-%m %H:%i:%s'),
 	CURRENT_DATE(),
-	'127.0.0.1' -- I'm not going to put a real IP
+	'127.0.0.1', -- I'm not going to put a real IP
+	5
 );
 
 INSERT INTO provisio.user_reservations (
 	user_id,
 	provisio_location_id,
 	amenity_id,
+	bedding_id,
 	guest_cost_id,
 	check_in_date,
 	check_out_date,
 	reservation_date,
-	ip
+	ip,
+	number_of_nights
 ) VALUES (
+	2,
 	2,
 	2,
 	2,
@@ -252,19 +259,23 @@ INSERT INTO provisio.user_reservations (
 	STR_TO_DATE('2022-31-03 00:00:00', '%Y-%d-%m %H:%i:%s'),
 	STR_TO_DATE('2022-03-04 00:00:00', '%Y-%d-%m %H:%i:%s'),
 	CURRENT_DATE(),
-	'127.0.0.1' -- I'm not going to put a real IP
+	'127.0.0.1', -- I'm not going to put a real IP
+	6
 );
 
 INSERT INTO provisio.user_reservations (
 	user_id,
 	provisio_location_id,
 	amenity_id,
+	bedding_id,
 	guest_cost_id,
 	check_in_date,
 	check_out_date,
 	reservation_date,
-	ip
+	ip,
+	number_of_nights
 ) VALUES (
+	3,
 	3,
 	3,
 	3,
@@ -272,5 +283,6 @@ INSERT INTO provisio.user_reservations (
 	STR_TO_DATE('2022-31-03 00:00:00', '%Y-%d-%m %H:%i:%s'),
 	STR_TO_DATE('2022-03-04 00:00:00', '%Y-%d-%m %H:%i:%s'),
 	CURRENT_DATE(),
-	'127.0.0.1' -- I'm not going to put a real IP
+	'127.0.0.1', -- I'm not going to put a real IP
+	7
 );
