@@ -191,7 +191,7 @@ MySQL localhost:33060+ ssl SQL>
 
 Now, source (run the `db_config.sql`) the config file from Provisio:
 ```bash
-MySQL localhost:33060+ ssl SQL> source \Users\username\Tomcat10\webapps\Provisio\WEB-INF\sql_scripts\db_config.sql
+MySQL localhost:33060+ ssl SQL> source C:\Users\username\Tomcat10\webapps\Provisio\WEB-INF\sql_scripts\db_config.sql
 ```
 
 Then, test it:
