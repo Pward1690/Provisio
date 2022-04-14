@@ -205,3 +205,85 @@ img {
         object-fit: cover;
 }
 
+/*Reservation Page*Added 4/13/22*************************************************/
+
+#resBookingForm {
+	margin-left: 8%;
+}
+
+.label {
+	flex-direction: column;
+}
+
+.dropbtn {
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+#message {
+	padding-left: 4%;
+}
+
+/***************************************************/
+
+#reg-message {
+	padding-left: 18%;
+    margin-bottom: 6%;
+    margin-top: 2%;
+}
+
+.header-content_2 {
+    box-shadow: 2px 2px 2px black;
+    border-style: solid;
+    border-radius: 5px;
+    padding-left: 20%;
+}
+
+.prompt-item {
+    background-color: lightgray;
+    list-style: none;
+    margin: 2%;
+    margin-left: 35%;
+    font-size: x-large;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px;
+    width: 20%;
+    float: center;
+}
+

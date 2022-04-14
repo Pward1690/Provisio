@@ -53,11 +53,14 @@
                 <label for="emailA">Email Address:</label>
                 <input type="text" id="emailA" name="username">
                 <br><br>
+
                 <label for="passW">Password:</label>
                 <input type="password" id="passW" name="password">
                 <br><br>
+                
                 <button type="submit" value="submit">Submit</button>
                 <br><br>
+
                 <a href="/Provisio/jsp/register.jsp">New user? Click here.</a>
             </form>
         </div>

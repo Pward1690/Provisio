@@ -13,7 +13,8 @@
 		<title><jsp:invoke fragment="title" /></title> 
 		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="/Provisio/css/styles.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		
 		<jsp:invoke fragment="styles" />
 	</head>
 <body>
@@ -26,7 +27,7 @@
 	        <div class="nav-item"><a href="/Provisio/jsp/index.jsp">Home</a></div>
 	        <div class="nav-item"><a href="#">About Us</a></div>
 	        <div class="nav-item"><a href="#">Locations</a></div>
-	        <div class="nav-item"><a href="#">Book Your Vacation</a></div>
+	        <div class="nav-item"><a href="/Provisio/jsp/ReservationBooking.jsp">Book Your Vacation</a></div>
 	        <div class="nav-item"><a href="#">Lookup Your Vacation</a></div>
 	        <div class="nav-item"><a href="#">Provisio Points</a></div>
 	    </div>
