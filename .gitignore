@@ -2,3 +2,6 @@ https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
 https://github.com/github/gitignore/blob/master/Java.gitignore
 sources.txt
 WEB-INF/classes/*
+.settings/*
+.classpath
+.project
