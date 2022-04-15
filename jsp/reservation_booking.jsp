@@ -37,13 +37,15 @@
     </jsp:attribute>
     <jsp:attribute name="styles">
         <!-- Any styles, cdns, or scripts go here -->
+        <link rel="stylesheet" type="text/css" href="/Provisio/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="/Provisio/css/index.css">
 		<style>
 			#divSummary {
 				position: relative;
 				top: -230px;
 				left: -12%;
 				width: 75%;
-				margin-left: 7%;
+				margin-left: 8%;
 				background-color: #5AB9EA;
 				border-color: black;
 				border-style: solid;
