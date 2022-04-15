@@ -11,6 +11,7 @@
 .flex-div {
     display: flex;
     flex-direction: row;
+    margin-left: 2%;
 }
 
 .flex-item-sm {
@@ -23,6 +24,12 @@
 
 .page-content {
         color: black;
+}
+
+.myslides fade {
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 /***************************************************/
@@ -211,6 +218,10 @@ img {
         object-fit: cover;
 }
 
+#welcome-message {
+	margin-left: 2%;
+}
+
 /*Reservation Page*Added 4/13/22*************************************************/
 
 #resBookingForm {
@@ -260,6 +271,20 @@ img {
 
 #message {
 	padding-left: 4%;
+}
+
+#quote {
+   border-color: black;
+   border-style: solid;
+   display: inline-block;
+   border-radius: 5px;
+   padding: 1vw;
+   background-color: #5680E9;
+   color: white;
+   padding-top: 10%;
+   padding-bottom: 10%;
+   box-shadow: 2px 2px 2px;
+   margin-top: 1.5%;
 }
 
 /***************************************************/
