@@ -1,3 +1,9 @@
+<!--
+    Capstone Provisio Project
+    Green Team
+    04/14/2022
+-->
+
 <%@ 
     page 
     language="java" 
@@ -27,9 +33,9 @@
     <jsp:attribute name="body">
         <p id="reg-message"><strong>Success! What would you like to do next?</strong></p>
 
-        <div class="prompt-item"><a href="ReservationBooking.jsp">Book a Vacation</a></div>
+        <div class="prompt-item"><a href="${initParam.UserReservationRedirectHostContextURL}">Book a Vacation</a></div>
         <div class="prompt-item"><a href="#">Lookup a Vacation</a></div>
         <div class="prompt-item"><a href="#">Track Provisio Points</a></div>
-        <div class="prompt-item"><a href="/Provisio/jsp/index.jsp">Home</a></div>
+        <div class="prompt-item"><a href="${initParam.UserHomeRedirectHostContextURL}">Home</a></div>
     </jsp:attribute>
 </t:header>

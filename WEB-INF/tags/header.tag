@@ -13,7 +13,8 @@
 		<title><jsp:invoke fragment="title" /></title> 
 		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="/Provisio/css/styles.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		
 		<jsp:invoke fragment="styles" />
 	</head>
 <body>
@@ -23,10 +24,10 @@
 	        <h2 id="nav-bar-top">
 	            <a style="color:black;" href="/Provisio/login">Login/Register</a>
 	        </h2>
-	        <div class="nav-item"><a href="/Provisio/jsp/index.jsp">Home</a></div>
+	        <div class="nav-item"><a href="${initParam.UserHomeRedirectHostContextURL}">Home</a></div>
 	        <div class="nav-item"><a href="#">About Us</a></div>
 	        <div class="nav-item"><a href="#">Locations</a></div>
-	        <div class="nav-item"><a href="#">Book Your Vacation</a></div>
+	        <div class="nav-item"><a href="${initParam.UserReservationRedirectHostContextURL}">Book Your Vacation</a></div>
 	        <div class="nav-item"><a href="#">Lookup Your Vacation</a></div>
 	        <div class="nav-item"><a href="#">Provisio Points</a></div>
 	    </div>
@@ -88,14 +89,16 @@
 	<!-- Functions for collapsing side nav bar -->
 	<script>
 	    function openNav() {
-	    document.getElementById("mySidebar").style.width = "250px";
-	    document.getElementById("main").style.marginLeft = "250px";
+	    	document.getElementById("mySidebar").style.width = "250px";
+	    	document.getElementById("main").style.marginLeft = "250px";
 	    }
 	    
 	    function closeNav() {
-	    document.getElementById("mySidebar").style.width = "0";
-	    document.getElementById("main").style.marginLeft= "0";
+	    	document.getElementById("mySidebar").style.width = "0";
+	    	document.getElementById("main").style.marginLeft= "0";
 	    }
+
+	    openNav();
 
 	    <% if (session.getAttribute("user_email") != null){ %>
 	    	let shouldOpen = true;

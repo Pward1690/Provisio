@@ -1,6 +1,8 @@
+./WEB-INF/src/service/ReservationService.java
 ./WEB-INF/src/filters/GuardFilter.java
 ./WEB-INF/src/servlets/LoginServlet.java
 ./WEB-INF/src/servlets/LogoutServlet.java
+./WEB-INF/src/servlets/ReservationServlet.java
 ./WEB-INF/src/servlets/RegisterServlet.java
 ./WEB-INF/src/servlets/HomeServlet.java
 ./WEB-INF/src/interfaces/DBDeleteStatementInterface.java
@@ -10,7 +12,10 @@
 ./WEB-INF/src/interfaces/DBStatementInterface.java
 ./WEB-INF/src/interfaces/DBResultInterface.java
 ./WEB-INF/src/interfaces/DBInsertStatementInterface.java
+./WEB-INF/src/model/ReservationBean.java
 ./WEB-INF/src/classes/PasswordHasher.java
+./WEB-INF/src/classes/IPHelper.java
+./WEB-INF/src/classes/DateHelper.java
 ./WEB-INF/src/classes/DB/DBUpdateStatement.java
 ./WEB-INF/src/classes/DB/DBJoinClause.java
 ./WEB-INF/src/classes/DB/DBHelper.java
@@ -20,4 +25,5 @@
 ./WEB-INF/src/classes/DB/DBSelectStatement.java
 ./WEB-INF/src/classes/DB/DBDeleteStatement.java
 ./WEB-INF/src/classes/DB/DBInsertStatement.java
+./WEB-INF/src/classes/DB/DBReservationHandler.java
 ./WEB-INF/src/classes/DB/DBResult.java

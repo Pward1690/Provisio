@@ -1,4 +1,10 @@
 /**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
+/**
  * General class that contains methods for joining and where clauses
  */
 package Provisio;
