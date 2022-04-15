@@ -1,4 +1,10 @@
 /**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
+/**
  * Log the user out
  */
 package Provisio;

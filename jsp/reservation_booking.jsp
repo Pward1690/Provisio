@@ -1,3 +1,9 @@
+<!--
+    Capstone Provisio Project
+    Green Team
+    04/14/2022
+-->
+
 <%@ 
 	page 
 	language="java" 
@@ -18,11 +24,11 @@
 
 <%@
 	page 
-	import="service.ReservationService"
+	import="Provisio.ReservationService"
 %>
 
 <% 
-	ReservationService rs = new ReservationService(); 
+	ReservationService reservation_service = new ReservationService(); 
 %>
 
 <t:header>
@@ -72,7 +78,7 @@
 		<form action="/Provisio/reservation" method="POST" id="resBookingForm">
 			<input type='hidden' name='action' value="reservation" /> 
 			<input type='hidden' name='reservation_id' value='0' />
-
+			
 			<div class="res-in-form-divs">
 				<strong>Locations: </strong> 
 				<input type="radio" name="location" value='1' id='location1'> 
@@ -169,6 +175,7 @@
 			<p>
 				<button onClick='submitForm()'>Submit</button>
 				<input type='button' onClick='cancelRes()' value='Cancel' />
+			</p>
 		</div>
 		<hr>
 
@@ -223,13 +230,6 @@
 				$("#spanTotal").html("$" + total);
 				const points = 150 * numberOfNights;
 				$("#spanProvisioPoints").html(points);
-		
-		
-				console.log("location1: ", location1);
-				console.log("location2: ", location2);
-				console.log("location3: ", location3);
-				console.log("checkin: ", checkin);
-				console.log("numberOfNights: ", numberOfNights);
 				$("#divSummary").show();
 			}
 
@@ -238,7 +238,7 @@
 			}
 
 			function cancelRes() {
-				window.location.replace("/ProvisionReg2/?action=cancel");
+				window.location.replace("/Provisio/?action=cancel");
 			}
 
 			$("#divSummary").hide();

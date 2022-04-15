@@ -1,3 +1,9 @@
+/**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
 package Provisio;
 
 import jakarta.servlet.RequestDispatcher;
@@ -9,6 +15,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
 import java.io.IOException;
+import java.net.UnknownHostException;
+import java.text.ParseException;
 
 /**
  * Servlet implementation class ReservationServlet
@@ -19,6 +27,7 @@ import java.io.IOException;
 )
 public class ReservationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	private ReservationService service;
 	private String home_project_context_redirect_url;
 	private String reservation_booking_project_context_redirect_url;
@@ -54,6 +63,7 @@ public class ReservationServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher(this.home_project_context_redirect_url);
 		rd.forward(request, response);
 	}
+
 	protected void doPost(
 		HttpServletRequest request, 
 		HttpServletResponse response
@@ -61,25 +71,29 @@ public class ReservationServlet extends HttpServlet {
 		throws ServletException, 
 		IOException 
 	{
+		System.out.println("In RES POST");
 		String action = request.getParameter("action");
 		if (action == null || action.equals("cancel")) {
 			RequestDispatcher rd = request.getRequestDispatcher(this.home_project_context_redirect_url);
 			rd.forward(request, response);
 			return;
 		}
+
 		switch (action) {
 		case "reservation":
 			ReservationBean rb = createReservation(request);
 			rb.setUser_id(1);
 			rb.setGuest_cost_id(1);
-			int id = service.save(rb);
+			Long id = service.save(rb);
 			if (id > 0)// success
 			{
 				request.setAttribute("confirmationNumber", id + "");
+				System.out.println("RES redirecting to confirmation.");
 				RequestDispatcher rd = request.getRequestDispatcher(this.confirmation_project_context_redirect_url);
 				rd.forward(request, response);
 			} else {
-				request.setAttribute("errorMessage", "reservation failed");
+				request.setAttribute("errorMessage", "Reservation failed");
+				System.out.println("RES redirecting to booking page.");
 				RequestDispatcher rd = request.getRequestDispatcher(this.reservation_booking_project_context_redirect_url);
 				rd.forward(request, response);
 			}
@@ -98,6 +112,19 @@ public class ReservationServlet extends HttpServlet {
 			rb.setCheck_in_date(request.getParameter("checkin"));
 			rb.setCheck_out_date(request.getParameter("checkout"));
 			rb.setNumber_of_nights(parseInt(request.getParameter("numberOfNights"), -1));
+
+			try {
+				rb.setReservation_date(DateHelper.getDate());
+			} catch (ParseException __){
+				rb.setReservation_date(null);
+			}
+
+			try {
+				rb.setIp(IPHelper.getIP());
+			} catch (UnknownHostException __){
+				rb.setIp("Unknown");
+			}
+			
 		
 			return rb;
 		} catch (Exception ex) {

@@ -1,3 +1,9 @@
+<!--
+    Capstone Provisio Project
+    Green Team
+    04/14/2022
+-->
+
 <%@ 
     page 
     language="java" 
@@ -22,7 +28,7 @@
     </jsp:attribute>
     <jsp:attribute name="styles">
         <!-- Any styles, cdns, or scripts go here -->
-        <link rel="stylesheet" type="text/css" href="/Provisio/jsp/index.css">
+        <link rel="stylesheet" type="text/css" href="/Provisio/css/index.css">
     </jsp:attribute>
     <jsp:attribute name="header_title">
         Provisio Hotels

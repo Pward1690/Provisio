@@ -1,7 +1,12 @@
+/**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
 package Provisio;
+
 import java.io.Serializable;
-import java.sql.PreparedStatement;
-import java.util.*;
 
 public class ReservationBean implements Serializable {
 
@@ -14,13 +19,11 @@ public class ReservationBean implements Serializable {
 	private int guest_cost_id;
 	private String check_in_date;
 	private String check_out_date;
-	private int reservation_date;
-	private int ip;
+	private String reservation_date;
+	private String ip;
 	private int number_of_nights;	
 
-// No-arg constructor
-	public ReservationBean() {
-	}
+	public ReservationBean() {}
 
 	public int getAmenity_id() {
 		return amenity_id;
@@ -94,19 +97,23 @@ public class ReservationBean implements Serializable {
 		this.guest_cost_id = guest_cost_id;
 	}
 
-	public int getReservation_date() {
+	public String getReservation_date() {
 		return reservation_date;
 	}
 
-	public void setReservation_date(int reservation_date) {
+	public void setReservation_date(
+		String reservation_date
+	) {
 		this.reservation_date = reservation_date;
 	}
 
-	public int getIp() {
+	public String getIp() {
 		return ip;
 	}
 
-	public void setIp(int ip) {
+	public void setIp(
+		String ip
+	) {
 		this.ip = ip;
 	}
 

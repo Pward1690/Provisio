@@ -1,4 +1,10 @@
 /**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
+/**
  * Handles registering the user
  */
 package Provisio;
@@ -96,7 +102,7 @@ public class RegisterServlet extends HttpServlet {
 		}
 
 		// Try to register them in and retrieve user id:
-		Integer user_id = DBUserHandler.registerUser(
+		Long user_id = DBUserHandler.registerUser(
 			first_name,
 			last_name,
 			email,

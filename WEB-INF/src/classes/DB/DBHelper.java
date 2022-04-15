@@ -1,4 +1,10 @@
 /**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
+/**
  * Helper for DB queries
  */
 package Provisio;
@@ -99,8 +105,10 @@ public class DBHelper {
 
 	/**
 	 * Insert into table
+	 * 
+	 * NOTE: returns -1 if failed
 	 */
-	public static void insertStatement(
+	public static Long insertStatement(
 		DBInsertStatement insert_statement_object
 	) throws ClassNotFoundException, SQLException {
 		// Abort if they passed in an invalid insert statement:
@@ -130,14 +138,23 @@ public class DBHelper {
 
 		System.out.println(sql_insert_statement);
 
-		PreparedStatement prepared_statement = connection.prepareStatement(sql_insert_statement);
+		PreparedStatement prepared_statement = connection.prepareStatement(sql_insert_statement, Statement.RETURN_GENERATED_KEYS);
 
 		// Bind specified column values to placeholders:
 		for (int i = 0; i < column_values.size(); i++)
 			prepared_statement.setString(i + 1, column_values.get(i));
 
 		prepared_statement.execute();
+
+		ResultSet result_set = prepared_statement.getGeneratedKeys();
+
+		Long insert_id = null;
+		if (result_set.next())
+			insert_id = result_set.getLong(1);
+
 		connection.close();
+
+		return (insert_id != null) ? insert_id : Long.valueOf(-1);
 	}
 
 	/**
@@ -204,7 +221,7 @@ public class DBHelper {
 	 * Create a DB connection and return it
 	 * @return Connection|null
 	 */
-	private static Connection getConnection() throws ClassNotFoundException {
+	public static Connection getConnection() throws ClassNotFoundException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 

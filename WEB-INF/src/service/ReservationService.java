@@ -1,13 +1,19 @@
+/**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
 package Provisio;
 
 public class ReservationService {
-	ReservationDAO dao;
+	DBReservationHandler reservation_handler;
 	public ReservationService()
 	{
-		dao = new ReservationDAO();
+		this.reservation_handler = new DBReservationHandler();
 	}
-	public int save (ReservationBean bean)
+	public Long save (ReservationBean bean)
 	{
-		return dao.save(bean);
+		return this.reservation_handler.save(bean);
 	}
 }

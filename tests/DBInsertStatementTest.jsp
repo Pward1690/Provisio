@@ -1,4 +1,10 @@
 <!--
+	Capstone Provisio Project
+    Green Team
+    04/14/2022
+-->
+
+<!--
 	Test insert statements
 -->
 <%@ 
@@ -51,7 +57,7 @@
 					);
 
 				try {
-					DBHelper.insertStatement(insert_statement);
+					out.println(DBHelper.insertStatement(insert_statement));
 					out.println("Success!");
 				} catch (Exception e){
 					out.println(e.getMessage());

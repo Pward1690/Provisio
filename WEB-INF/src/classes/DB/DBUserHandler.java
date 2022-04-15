@@ -1,4 +1,10 @@
 /**
+ * Capstone Provisio Project
+ * Green Team
+ * 04/14/2022
+ */
+
+/**
  * Handles registration and login stuff
  */
 package Provisio;
@@ -97,7 +103,7 @@ public class DBUserHandler {
 	 * 
 	 * NOTE: returns -1 if fail
 	 */
-	public static Integer registerUser(
+	public static Long registerUser(
 		String first_name,
 		String last_name,
 		String user_email,
@@ -142,34 +148,14 @@ public class DBUserHandler {
 				.columns(column_names)
 				.values(values);
 
-			DBHelper.insertStatement(insert_statement);
-
-			// Get last inserted ID:
-			DBSelectStatement select_statement = new DBSelectStatement();
-			select_statement
-				.fromTable("users")
-				.columns(
-					new String[] {
-						"id"
-					}
-				)
-				.where(
-					new String[] {
-						"email = ?", user_email
-					}
-				);
-
-			DBResult result = DBHelper.selectStatement(select_statement);
-			ArrayList<Hashtable<String, String>> records = result.getRecords();
+			Long insert_id = DBHelper.insertStatement(insert_statement);
 
 			System.out.println("Insert ID select: ");
-			System.out.println(records);
+			System.out.println(insert_id);
 
 			// Make sure something got returned:
-			if (records.size() == 0)
-				return -1;
-
-			String user_id = records.get(0).get("id");
+			if (insert_id == -1)
+				return Long.valueOf(-1);
 
 			// Now insert a record for them for provisio points:
 			insert_statement = new DBInsertStatement();
@@ -182,7 +168,7 @@ public class DBUserHandler {
 
 			values = new ArrayList(
 				Arrays.asList(
-					user_id,
+					Long.toString(insert_id),
 					"0" // Default to 0 points
 				)
 			);
@@ -192,13 +178,14 @@ public class DBUserHandler {
 				.columns(column_names)
 				.values(values);
 
-			DBHelper.insertStatement(insert_statement);
+			if (DBHelper.insertStatement(insert_statement) == -1)
+				return Long.valueOf(-1);
 
-			return Integer.parseInt(user_id);
-		} catch (SQLException | ClassNotFoundException | NoSuchAlgorithmException | NumberFormatException e){
+			return insert_id;
+		} catch (SQLException | ClassNotFoundException | NoSuchAlgorithmException e){
 			System.out.println("registerUser() failed.");
 			e.printStackTrace();
-			return -1;
+			return Long.valueOf(-1);
 		}
 	}
 
