@@ -78,15 +78,14 @@
 		</c:if>
 		
 		<form action="/Provisio/reservation" method="POST" id="resBookingForm">
-			<input type='hidden' name='action' value="reservation" /> 
 			<input type='hidden' name='reservation_id' value='0' />
 			
 			<div class="res-in-form-divs">
 				<strong>Locations: </strong> 
-				<input type="radio" name="location" value='1' id='location1'> 
+				<input type="radio" name="location" value='1' id='location1' required> 
 				<label for="radio_1">Lake Garda, Italy</label> 
 
-				<input type="radio" name="location" value='2'id='location2'> 
+				<input type="radio" name="location" value='2' id='location2'> 
 				<label for="radio_2">Marrakesh, Morocco</label> 
 
 				<input type="radio" name="location" value='3' id='location3'> 
@@ -95,7 +94,7 @@
 			<hr>
 			<div class="res-in-form-divs">
 				<strong>Amenities: </strong> 
-				<input type="radio" name="amenities" value='1' id='amenities1'> 
+				<input type="radio" name="amenities" value='1' id='amenities1' required> 
 				<label for="radio_4">Wi-Fi $12.99</label> 
 
 				<input type="radio" name="amenities" value='2' id='amenities2'> 
@@ -108,7 +107,7 @@
 
 			<div class="res-in-form-divs">
 				<strong>Bedding and Rates: </strong> 
-				<input type="radio" name="beddingRates" value='1' id='beddingRates1'> 
+				<input type="radio" name="beddingRates" value='1' id='beddingRates1' required> 
 				<label for="radio_7">1 Double $110</label> 
 
 				<input type="radio" name="beddingRates" value='2' id='beddingRates2'> 
@@ -123,15 +122,15 @@
 			<hr>
 			<div class="res-in-form-divs">
 				<strong>Check-In Date: </strong> 
-				<input type="date" name="checkin" id="checkin" /> 
+				<input type="date" name="checkin" id="checkin" required/> 
 
 				<strong>Check-Out Date: </strong> 
-				<input type="date" name="checkout" id="checkout" />
+				<input type="date" name="checkout" id="checkout" required/>
 			</div>
 			<hr>
 			<div class="res-in-form-divs">
 				<strong>Number of Nights: </strong> 
-				<select name='numberOfNights' id='numberOfNights'>
+				<select name='numberOfNights' id='numberOfNights' required>
 					<option value='1'>1</option>
 					<option value='2'>2</option>
 					<option value='3'>3</option>
@@ -228,7 +227,6 @@
 				const numberOfNights = parseInt($("#numberOfNights").val());
 				$("#spanNumNights").html(numberOfNights);
 				const total = amount * numberOfNights;
-				console.log("TOTAL: ", total);
 				$("#spanTotal").html("$" + total);
 				const points = 150 * numberOfNights;
 				$("#spanProvisioPoints").html(points);
@@ -236,11 +234,12 @@
 			}
 
 			function submitForm() {
+				$("#divSummary").hide();
 				$("#resBookingForm").submit();
 			}
 
 			function cancelRes() {
-				window.location.replace("/Provisio/?action=cancel");
+				$("#divSummary").hide();
 			}
 
 			$("#divSummary").hide();

@@ -31,7 +31,7 @@
         Provisio Reservation Confirmation
     </jsp:attribute>
     <jsp:attribute name="body">
-        <p id="reg-message"><strong>Your reservation was successfully booked. Your reservation # is ${requestScope.confirmationNumber}</strong></p> 
+        <p id="reg-message"><strong>Your reservation was successfully booked. Your reservation # is ${requestScope.confirmationNumber}.</strong></p> 
 
         <p>What would you like to do next?</p>
 

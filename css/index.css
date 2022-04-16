@@ -224,7 +224,7 @@ img {
 
 /*Reservation Page*Added 4/13/22*************************************************/
 
-#resBookingForm {
+#resBookingForm, .error-message {
 	margin-left: 7%;
 }
 
