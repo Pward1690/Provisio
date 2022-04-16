@@ -45,17 +45,17 @@ public class GuardFilter implements Filter {
 	 */
 	private final static String[] guest_user_areas = {
 		"login",
-		"register",
-		"about"
+		"register"
 	};
 
 	/**
 	 * Contains all file names that shouldn't be messed with at all
-	 *////////
+	 */
 	private final static String[] do_nothing_areas = {
 		"home",
 		"index",
-		"error-404"
+		"error-404",
+		"about"
 	};
 
 	/**

@@ -25,7 +25,7 @@
 	            <a style="color:black;" href="/Provisio/login">Login/Register</a>
 	        </h2>
 	        <div class="nav-item"><a href="${initParam.UserHomeRedirectHostContextURL}">Home</a></div>
-	        <div class="nav-item"><a href="#">About Us</a></div>
+	        <div class="nav-item"><a href="${initParam.UserAboutUsRedirectHostContextURL}">About Us</a></div>
 	        <div class="nav-item"><a href="#">Locations</a></div>
 	        <div class="nav-item"><a href="${initParam.UserReservationRedirectHostContextURL}">Book Your Vacation</a></div>
 	        <div class="nav-item"><a href="#">Lookup Your Vacation</a></div>
