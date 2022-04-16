@@ -188,4 +188,20 @@
 		<param-name>UserError404RedirectProjectContextURL</param-name>
 		<param-value>/jsp/error-404.jsp</param-value>
 	</context-param>
+
+	<!--
+		About us page - host context
+	-->
+	<context-param>
+		<param-name>UserAboutUsRedirectHostContextURL</param-name>
+		<param-value>/Provisio/jsp/about.jsp</param-value>
+	</context-param>
+
+	<!--
+		About us page - project context
+	-->
+	<context-param>
+		<param-name>UserAboutUsRedirectProjectContextURL</param-name>
+		<param-value>/jsp/about.jsp</param-value>
+	</context-param>
 </web-app>

@@ -34,7 +34,7 @@
         Provisio Hotels
     </jsp:attribute>
     <jsp:attribute name="page_title">
-        "About Provisio Hotels"
+        About Provisio Hotels
     </jsp:attribute>
     <jsp:attribute name="body">
 
@@ -53,11 +53,11 @@
                     Provisio Hotels started in 1995 when six friends decided to shake up the hotel industry 
                     by providing exceptional service in amazing locations for an unbelievable price. The 
                     first Provisio location was in Lake Garda, Italy, but eventually expanded to include locations on three continents. 
-                    Provisio’s Lake Garda location’s first staff members were none other than the founders, 
+                    Provisio's Lake Garda location's first staff members were none other than the founders, 
                     Jacob Breault, Cameron Frison, Parrish Ward, Mitchell Kwon, Caleb Mastromonaco, and Andrew Schaefer, 
                     and together they built a brand recognized for excellence the whole world over. Here at Provisio, 
                     we are excited that you would consider us as your home away from home. We know you will not be disappointed. 
-                    So check out all we have to offer because here at Provisio, we want you to know that “your grand getaway awaits!”
+                    So check out all we have to offer because here at Provisio, we want you to know that "your grand getaway awaits!"
                 </p>
             </div>
         </div>
