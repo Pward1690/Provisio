@@ -45,7 +45,8 @@ public class GuardFilter implements Filter {
 	 */
 	private final static String[] guest_user_areas = {
 		"login",
-		"register"
+		"register",
+		"about"
 	};
 
 	/**
@@ -54,8 +55,7 @@ public class GuardFilter implements Filter {
 	private final static String[] do_nothing_areas = {
 		"home",
 		"index",
-		"error-404",
-		"about"
+		"error-404"
 	};
 
 	/**
