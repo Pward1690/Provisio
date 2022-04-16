@@ -62,9 +62,11 @@
             </div>
         </div>
 
-        <jsp:attribute name="page_title">
-        Contact Us
-        </jsp:attribute>
+        <div class="page-heading">
+            <h3>
+                Contact Us
+            </h3>
+        </div>
 
         <div class="flex-div">
             <div class="flex-item-lg">
