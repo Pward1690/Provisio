@@ -62,6 +62,37 @@
             </div>
         </div>
 
+        <jsp:attribute name="page_title">
+        Contact Us
+        </jsp:attribute>
+
+        <div class="flex-div">
+            <div class="flex-item-lg">
+                <div class="slideshow">
+                    
+                    <img src="/Provisio/images/img5.png" style="width:100%">
+                      
+                </div>
+            </div>
+
+            <div id="quote" class="flex-item-sm">
+                <p>Whatever your need, and whatever your preferred method of communication, 
+                    Provisio Hotels is ready to help.
+                </p>
+                <br>
+                <br>
+
+                <ul>
+                    <li>Phone: 1-77-Provisio (1-777-768-4746)</li>
+                    <li>Email: grandgetaway@provisiohotels.com</li>
+                    <li>Headquarters: 612 Highbrooke Rd.
+                        London
+                        W79 3NK
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         
     </jsp:attribute>
 </t:header>
