@@ -22,7 +22,7 @@ class DateHelper {
 		throws ParseException
 	{
 		Date date = new Date();
-		SimpleDateFormat formatter = new SimpleDateFormat("YY/mm/dd");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
 		return formatter.format(date);
 	}
 
