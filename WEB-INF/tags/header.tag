@@ -28,7 +28,7 @@
 	        <div class="nav-item"><a href="${initParam.UserAboutUsRedirectHostContextURL}">About Us</a></div>
 	        <div class="nav-item"><a href="#">Locations</a></div>
 	        <div class="nav-item"><a href="${initParam.UserReservationRedirectHostContextURL}">Book Your Vacation</a></div>
-	        <div class="nav-item"><a href="#">Lookup Your Vacation</a></div>
+	        <div class="nav-item"><a href="${initParam.UserReservationLookupRedirectHostContextURL}">Lookup Your Vacation</a></div>
 	        <div class="nav-item"><a href="#">Provisio Points</a></div>
 	    </div>
 

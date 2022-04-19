@@ -29,7 +29,8 @@ import jakarta.servlet.ServletResponse;
 		"*.md",
 		"*.txt",
 		"*.docx",
-		"/reservation"
+		"/reservation",
+		"/lookup/reservation"
 	}
 )
 public class GuardFilter implements Filter {
