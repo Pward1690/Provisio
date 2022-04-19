@@ -54,6 +54,16 @@
 		<url-pattern>/reservation</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>ReservationLookupServlet</servlet-name>
+		<servlet-class>Provisio.ReservationLookupServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReservationLookupServlet</servlet-name>
+		<url-pattern>/lookup/reservation</url-pattern>
+	</servlet-mapping>
+
 	<welcome-file-list>
 	    <welcome-file>/jsp/index.jsp</welcome-file>
 	</welcome-file-list>
@@ -203,5 +213,37 @@
 	<context-param>
 		<param-name>UserAboutUsRedirectProjectContextURL</param-name>
 		<param-value>/jsp/about.jsp</param-value>
+	</context-param>
+
+	<!--
+		Reservation lookup page - host context
+	-->
+	<context-param>
+		<param-name>UserReservationLookupRedirectHostContextURL</param-name>
+		<param-value>/Provisio/jsp/reservation_lookup.jsp</param-value>
+	</context-param>
+
+	<!--
+		Reservation lookup page - project context
+	-->
+	<context-param>
+		<param-name>UserReservationLookupRedirectProjectContextURL</param-name>
+		<param-value>/jsp/reservation_lookup.jsp</param-value>
+	</context-param>
+
+	<!--
+		Reservation lookup result page - host context
+	-->
+	<context-param>
+		<param-name>UserReservationLookupResultRedirectHostContextURL</param-name>
+		<param-value>/Provisio/jsp/reservation_result.jsp</param-value>
+	</context-param>
+
+	<!--
+		Reservation lookup result page - project context
+	-->
+	<context-param>
+		<param-name>UserReservationLookupResultRedirectProjectContextURL</param-name>
+		<param-value>/jsp/reservation_result.jsp</param-value>
 	</context-param>
 </web-app>

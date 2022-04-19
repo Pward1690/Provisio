@@ -34,7 +34,7 @@
         <p id="reg-message"><strong>Success! What would you like to do next?</strong></p>
 
         <div class="prompt-item"><a href="${initParam.UserReservationRedirectHostContextURL}">Book a Vacation</a></div>
-        <div class="prompt-item"><a href="#">Lookup a Vacation</a></div>
+        <div class="prompt-item"><a href="${initParam.UserReservationLookupRedirectHostContextURL}">Lookup a Vacation</a></div>
         <div class="prompt-item"><a href="#">Track Provisio Points</a></div>
         <div class="prompt-item"><a href="${initParam.UserHomeRedirectHostContextURL}">Home</a></div>
     </jsp:attribute>

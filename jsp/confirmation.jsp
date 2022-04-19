@@ -40,7 +40,7 @@
         </div>
 
         <div class="prompt-item">
-            <a href="#">Lookup a Vacation</a>
+            <a href="${initParam.UserReservationLookupRedirectHostContextURL}">Lookup a Vacation</a>
         </div>
 
         <div class="prompt-item">

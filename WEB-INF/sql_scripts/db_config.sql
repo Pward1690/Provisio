@@ -56,6 +56,13 @@ CREATE TABLE provisio.reservation_guest_costs(
 	PRIMARY KEY(id)
 );
 
+CREATE TABLE provisio.bedding_rates(
+	id int NOT NULL AUTO_INCREMENT,
+	bedding_name nvarchar(255) NOT NULL,
+	bedding_cost double NOT NULL,
+	PRIMARY KEY(id)
+);
+
 CREATE TABLE provisio.user_reservations(
     id int NOT NULL AUTO_INCREMENT,
     user_id int NOT NULL,
@@ -72,7 +79,8 @@ CREATE TABLE provisio.user_reservations(
     FOREIGN KEY(user_id) REFERENCES provisio.users(id),
     FOREIGN KEY(provisio_location_id) REFERENCES provisio.reservation_locations(id),
     FOREIGN KEY(amenity_id) REFERENCES provisio.reservation_amenities(id),
-    FOREIGN KEY(guest_cost_id) REFERENCES provisio.reservation_guest_costs(id)
+    FOREIGN KEY(guest_cost_id) REFERENCES provisio.reservation_guest_costs(id),
+    FOREIGN KEY(bedding_id) REFERENCES provisio.bedding_rates(id)
 );
 
 -- Populate the database
@@ -212,6 +220,39 @@ INSERT INTO provisio.reservation_guest_costs (
 ) VALUES (
 	"5",
 	150.0
+);
+
+-- Bedding rates
+INSERT INTO provisio.bedding_rates(
+	bedding_name,
+	bedding_cost
+) VALUES (
+	"1 Double",
+	"110"
+);
+
+INSERT INTO provisio.bedding_rates(
+	bedding_name,
+	bedding_cost
+) VALUES (
+	"1 Queen",
+	"125"
+);
+
+INSERT INTO provisio.bedding_rates(
+	bedding_name,
+	bedding_cost
+) VALUES (
+	"2 Queen",
+	"150"
+);
+
+INSERT INTO provisio.bedding_rates(
+	bedding_name,
+	bedding_cost
+) VALUES (
+	"1 King",
+	"165"
 );
 
 -- User reservations:
