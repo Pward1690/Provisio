@@ -1,7 +1,7 @@
 <!--
     Capstone Provisio Project
     Green Team
-    04/14/2022 t
+    04/14/2022
 -->
 
 <%@ 
